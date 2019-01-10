@@ -2,6 +2,7 @@
 Assignmensts for NodeJs masterclass course by pirple on thinkific
 
 ## Contents
+```
 |--- A1-RESTAPI
 |    |--- https
 |    |    |--- cert.pem
@@ -10,4 +11,5 @@ Assignmensts for NodeJs masterclass course by pirple on thinkific
 |    |--- index.js
 |--- README.md
 
+```
 
