@@ -3,13 +3,15 @@ Assignmensts for NodeJs masterclass course by pirple on thinkific
 
 ## Contents
 ```
-|-- A1-RESTAPI
-|    |-- https
-|    |    |-- cert.pem
-|	 |	  |-- key.pem
-|    |-- config.js
-|    |-- index.js
-|-- README.md
-
+│   .gitignore
+│   README.md
+│
+└───A1-RESTAPI
+    │   config.js
+    │   index.js
+    │
+    └───https
+            cert.pem
+            key.pem
 ```
 
