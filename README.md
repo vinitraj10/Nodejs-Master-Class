@@ -3,6 +3,8 @@ Assignmensts for NodeJs masterclass course by pirple on thinkific
 
 
 ## Instructions
+Clone the project and move to the root directory and follow the following instructions
+
 Moving to the directory
 ```
 cd A-<Assignment-Number>-<Topic-Name>
