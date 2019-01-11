@@ -11,7 +11,7 @@ var _data = require('./lib/data');
 
 //Testing 
 // @TODO delete it
-_data.update('test','newfile',{'aa':'b'},function(err){
+_data.update('test','newfile',{'foo':'edit_bar'},function(err){
 	console.log("This is the error",err);
 })
 // It is an object which contains functions for the required url path.
