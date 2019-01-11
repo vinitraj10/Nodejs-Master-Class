@@ -1,34 +1,32 @@
 /*
-*  Create and export the configuration variables
+*	Create and export the configuration file
 *
 */
 
-// container for all the enivironments
 
-var environments = {};
+// Creating the environment object to hold the important configurations
+var environment = {};
 
-// Staging default environment
-environments.staging = {
-	'httpPort': 8080,
-	'httpsPort': 8081,
-	'envName': 'staging'
+// Defining staging configuration
+environment.staging = {
+	'httpPort':8080,
+	'httpsPort':8081,
+	'envName':'staging'
 }
 
-// Production environment
-
-environments.production = {
-	'port':8000,
-	'httpsport':8001,
-	'envName': 'production'
+// Defining production configuration
+environment.production = {
+	'httpPort':8000,
+	'httpsPort':8001,
+	'envName':'production'
 }
 
-// Determine which environment was passed as command line argument
+// Determining which environment is passed through cli
+var currentEnv = typeof(process.env.NODE_ENV) =='string' ? process.env.NODE_ENV.toLowerCase() : '';
 
-var currentEnvironment = typeof(process.env.NODE_ENV) == 'string' ? process.env.NODE_ENV.toLowerCase() : '';
+// Finding whether the environment exists or not if not we will use staging environment
+var envToExport = typeof(environment[currentEnv]) == 'object' ? environment[currentEnv] :environment.staging;
 
-// Check out the current environment is matched with our environment if not default is staging
-
-var envToExport = typeof(environments[currentEnvironment]) == 'object' ? environments[currentEnvironment] : environments.staging;
-
+// export the required environment object
 
 module.exports = envToExport;

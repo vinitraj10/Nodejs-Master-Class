@@ -5,7 +5,7 @@ var http = require('http');
 var url = require('url');
 var fs = require('fs');
 var StringDecoder = require('string_decoder').StringDecoder;
-
+var config = require('./config');
 
 // It is an object which contains functions for the required url path.
 var handlers = {};
@@ -125,11 +125,11 @@ var unifiedServer = function(req,res){
 }
 
 // HTTP server listening on 8080 port
-httpServer.listen(8080,function(){
-	console.log("HTTP Server running at 8080");
+httpServer.listen(config.httpPort,function(){
+	console.log("HTTP Server running at " + config.httpPort);
 });
 
 // HTTPS server listening on 8081 port
-httpsServer.listen(8081,function(){
-	console.log("HTTPS Server running at 8081");
+httpsServer.listen(config.httpsPort,function(){
+	console.log("HTTPS Server running at " + config.httpsPort);
 });
